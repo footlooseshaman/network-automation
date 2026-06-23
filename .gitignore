@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Secrets & credentials — NEVER commit these
+*.env
+secrets.py
+credentials.py
+devices.yaml
+
+# Editor / OS junk
+.vscode/
+.DS_Store
