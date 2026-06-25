@@ -28,3 +28,19 @@ print(device["location"])
 
 print(device.get("model"))
 print(device.get("model", "unknown"))
+
+print("--- Device details ---")
+for key, value in device.items():
+    print(key, "=", value)
+
+
+
+
+inventory = [
+    {"host": "192.168.1.1", "device_type": "cisco_ios"},
+    {"host": "192.168.1.2", "device_type": "cisco_ios"},
+    {"host": "192.168.1.3", "device_type": "cisco_nxos"}
+]
+
+for device in inventory:
+    print("Connecting to", device["host"], "-", device["device_type"])
