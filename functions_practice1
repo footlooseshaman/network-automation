@@ -1,0 +1,8 @@
+def device_login(host, username, password):
+    if password == "cisco123":
+        return host + ": login successful for " + username
+    else:
+        return host + ": login FAILED for " + username
+
+result = device_login("Router1", "admin", "wrongpass")
+print(result)
