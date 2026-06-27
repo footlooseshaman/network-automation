@@ -1,10 +1,3 @@
-def check_status(device_name):
-    status = device_name + " is reachable"
-    return status
-
-result = check_status("Router1")
-print(result)
-
 
 device = {
     "host": "192.168.1.1",
@@ -44,3 +37,8 @@ inventory = [
 
 for device in inventory:
     print("Connecting to", device["host"], "-", device["device_type"])
+
+
+
+# Returns None (No error raised!)
+print(device.get("email")) 
