@@ -17,3 +17,7 @@ devices.yaml
 # Editor / OS junk
 .vscode/
 .DS_Store
+
+
+venv/
+.venv/
