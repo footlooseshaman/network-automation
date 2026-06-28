@@ -11,8 +11,18 @@ device = {
     "password" : os.getenv("NETMIKO_PASSWORD"),
 }
 
+commands = [
+    "show ip interface brief",
+    "show version",
+    "show ip route",
+]
+
 connection = ConnectHandler(**device)
-output = connection.send_command("show ip interface brief")
-print(output)
+
+for command in commands:
+    print(f"\n=== OUTPUT OF: {command} ====")
+    output = connection.send_command(command)
+    print(output)
+
 
 connection.disconnect()
